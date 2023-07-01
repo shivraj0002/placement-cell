@@ -1,2 +1,3 @@
 ﻿student_ID,student_Name,student_College,student_Email,student_Batch,student_Placement_Status,student_DSA_Score,student_Webd_Score,student_React_Score,interview_Date,interview_Company,interview_Result
-"64a004afd595550b9799fd45","sd test","mgm nanded","sdtest@gmail.com","NOV22","Not placed",98,85,96,"2023-07-01","Coding Ninjas","PASS"
+"64a0060fd595550b9799fd6c"," vishranti dange","iit bombay","vdtest@gmail.com","Jan22","Not placed",98,98,99,"NA","NA","NA"
+"64a00632d595550b9799fd71","thor","iit kanpur","thor@gmail.com","NOV22","Not placed",65,75,85,"2023-07-11","Flipkart","PASS"

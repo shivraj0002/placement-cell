@@ -51,6 +51,8 @@ const studentSchema = new mongoose.Schema(
           enum: ["pass", "on hold", "fail", "didn't attempt"].map((status) =>
             status.toLowerCase()
           ),
+          default: "on hold",
+          required: false,
         },
       },
     ],
