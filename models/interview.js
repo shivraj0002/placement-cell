@@ -20,7 +20,9 @@ const interviewSchema = new Schema(
         },
         result: {
           type: String,
-          enum: ["Pass", "On Hold", "Fail", "Didn't attempt"],
+          enum: ["Pass", "On Hold", "Fail", "Didn't attempt"].map((status) =>
+            status.toLowerCase()
+          ),
         },
       },
     ],

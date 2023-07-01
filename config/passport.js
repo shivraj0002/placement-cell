@@ -8,27 +8,27 @@ passport.use(
       usernameField: "email",
       passReqToCallback: true,
     },
-    async function (req, email, password, done) {
-      try {
-        //find user to check
-        let user = await User.findOne({ email: email });
-        //if user is not found
+    function (req, email, password, done) {
+      // find the user and establish the identity
+      User.findOne({ email: email }, async function (err, user) {
+        if (err) {
+          console.log("error in finding the user", err);
+          return done(err);
+        }
         if (!user) {
-          console.log("Invalid username or Password");
+          console.log("Invalid UserName or Password");
           return done(null, false);
         }
-        //user is available, now check password
-        const checkPassword = await user.isValidatePassword(password);
 
-        if (!checkPassword) {
-          console.log("Invalid username or Password");
+        // match the Password
+
+        if (user.password != password) {
+          console.log("Invalid UserName or Password");
           return done(null, false);
         }
-        //all ok return user
+
         return done(null, user);
-      } catch (err) {
-        console.log("Error in finding the user: ", err);
-      }
+      });
     }
   )
 );

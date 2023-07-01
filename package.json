@@ -4,7 +4,9 @@
   "description": "coding ninjas backend skill test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [
     "nodejs",
@@ -23,6 +25,7 @@
     "dotenv": "^16.0.3",
     "download-csv": "^1.1.1",
     "ejs": "^3.1.8",
+    "export-to-csv": "^0.2.1",
     "express": "^4.18.2",
     "express-ejs": "^2.0.0",
     "express-session": "^1.17.3",

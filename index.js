@@ -34,7 +34,7 @@ app.use(
       maxAge: 1000 * 60 * 60, //time in milliseconds
     },
     store: MongoStore.create({
-      mongoUrl: process.env.MONGODB_URI,
+      mongoUrl: process.env.MONGO_URI,
       autoRemove: "disabled",
     }),
     function(err) {
